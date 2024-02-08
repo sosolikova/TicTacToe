@@ -35,8 +35,22 @@ class MainActivity : AppCompatActivity() {
         boardList.add(binding.c1)
         boardList.add(binding.c2)
         boardList.add(binding.c3)
-
     }
 
-    fun boardTapped(view: View) {}
+    fun boardTapped(view: View)
+    {
+        if(view !is Button)
+            return
+        addToBoard(view)
+    }
+
+    private fun addToBoard(button: Button)
+    {
+        if(button.text != "")
+            return
+        if(currentTurn == Turn.NOUGHT)
+        {
+            button.text = "0"
+        }
+    }
 }
