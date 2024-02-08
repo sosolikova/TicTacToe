@@ -50,7 +50,30 @@ class MainActivity : AppCompatActivity() {
             return
         if(currentTurn == Turn.NOUGHT)
         {
-            button.text = "0"
+            button.text = NOUGHT
+            currentTurn = Turn.CROSS
         }
+        if(currentTurn == Turn.CROSS)
+        {
+            button.text = CROSS
+            currentTurn = Turn.NOUGHT
+        }
+        setTurnLabel()
+    }
+    private fun setTurnLabel()
+    {
+        var turnText = ""
+        if(currentTurn == Turn.CROSS)
+            turnText = "Turn $CROSS"
+        else if(currentTurn == Turn.NOUGHT)
+            turnText = "Turn $NOUGHT"
+
+        binding.turnTV.text = turnText
+
+    }
+    companion object
+    {
+        const val NOUGHT = "0"
+        const val CROSS = "X"
     }
 }
