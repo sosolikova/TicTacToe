@@ -34,30 +34,49 @@
 
             <Button
                 style="@style/column" />
+            <View
+                style="@style/verticalLine"/>
             <Button
                 style="@style/column" />
+            <View
+                style="@style/verticalLine"/>
             <Button
                 style="@style/column" />
+
         </LinearLayout>
+        <View
+            style="@style/horizontalLine"/>
         <LinearLayout
             style="@style/row">
 
             <Button
                 style="@style/column" />
+            <View
+                style="@style/verticalLine"/>
             <Button
                 style="@style/column" />
+            <View
+                style="@style/verticalLine"/>
             <Button
                 style="@style/column" />
+
         </LinearLayout>
+        <View
+            style="@style/horizontalLine"/>
         <LinearLayout
             style="@style/row">
 
             <Button
                 style="@style/column" />
+            <View
+                style="@style/verticalLine"/>
             <Button
                 style="@style/column" />
+            <View
+                style="@style/verticalLine"/>
             <Button
                 style="@style/column" />
+
         </LinearLayout>
 
     </LinearLayout>
