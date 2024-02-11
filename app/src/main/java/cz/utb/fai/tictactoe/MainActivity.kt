@@ -45,8 +45,34 @@ class MainActivity : AppCompatActivity() {
 
         if(fullBoard())
         {
-
+            result("Draw")
         }
+    }
+
+    private fun result(title: String)
+    {
+        AlertDialog.Builder(this)
+            .setTitle(title)
+            .setPositiveButton("Reset")
+            { _,_ ->
+                resetBoard()
+            }
+            .setCancelable(false)
+            .show()
+    }
+    private fun resetBoard()
+    {
+        for(button in boardList)
+        {
+            button.text = ""
+        }
+        if(firstTurn) == Turn.NOUGHT)
+            firstTurn = Turn.CROSS
+        else if(firstTurn == Turn.CROSS)
+            firstTurn = Turn.NOUGHT
+
+        currentTurn = firstTurn
+        setTurnLabel()
     }
     private fun fullBoard(): Boolean
     {
