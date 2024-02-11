@@ -42,6 +42,20 @@ class MainActivity : AppCompatActivity() {
         if(view !is Button)
             return
         addToBoard(view)
+
+        if(fullBoard())
+        {
+
+        }
+    }
+    private fun fullBoard(): Boolean
+    {
+        for(button in boardList)
+        {
+            if(button.text == "")
+                return false
+        }
+         return true
     }
 
     private fun addToBoard(button: Button)
