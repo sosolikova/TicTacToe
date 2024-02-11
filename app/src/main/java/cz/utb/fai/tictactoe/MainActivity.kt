@@ -3,6 +3,7 @@ package cz.utb.fai.tictactoe
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -31,6 +32,12 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val secondActButton = findViewById<Button>(R.id.second_act_btn)
+        secondActButton.setOnClickListener {
+            val Intent = Intent(this,SecondActivity::class.java)
+            startActivity(Intent)
+        }
         initBoard()
         setTurnLabel()
     }
