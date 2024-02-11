@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             button.text = NOUGHT
             currentTurn = Turn.CROSS
         }
-        if(currentTurn == Turn.CROSS)
+        else if(currentTurn == Turn.CROSS)
         {
             button.text = CROSS
             currentTurn = Turn.NOUGHT
