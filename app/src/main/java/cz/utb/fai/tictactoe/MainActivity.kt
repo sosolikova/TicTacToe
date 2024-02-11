@@ -70,7 +70,19 @@ class MainActivity : AppCompatActivity() {
             return true
         if(match(binding.c1,s) && match(binding.c2,s) && match(binding.c3,s))
             return true
+        // vertical victory
+        if(match(binding.a1,s) && match(binding.b1,s) && match(binding.c1,s))
+            return true
+        if(match(binding.a2,s) && match(binding.b2,s) && match(binding.c2,s))
+            return true
+        if(match(binding.a3,s) && match(binding.b3,s) && match(binding.c3,s))
+            return true
 
+        // diagonal victory
+        if(match(binding.a1,s) && match(binding.b2,s) && match(binding.c3,s))
+            return true
+        if(match(binding.a3,s) && match(binding.b2,s) && match(binding.c1,s))
+            return true
         return false
     }
 
