@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     }
     private var firstTurn = Turn.CROSS
     private var currentTurn = Turn.CROSS
+
+    private var crossesScore = 0
+    private var noughtsScore = 0
+
     private var boardList = mutableListOf<Button>()
 
     private lateinit var binding : ActivityMainBinding
@@ -48,10 +52,12 @@ class MainActivity : AppCompatActivity() {
 
         if(checkForVictory(NOUGHT))
         {
+            noughtsScore++
             result("Noughts Win!")
         }
         if(checkForVictory(CROSS))
         {
+            crossesScore++
             result("Crosses Win!")
         }
 
@@ -90,8 +96,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun result(title: String)
     {
+        val message = "\nNoughts $noughtsScore\n\nCrosses $crossesScore"
         AlertDialog.Builder(this)
             .setTitle(title)
+            .setMessage(message)
             .setPositiveButton("Reset")
             { _,_ ->
                 resetBoard()
