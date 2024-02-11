@@ -13,10 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
+    <style name="Theme.SnapchatSplashScreen" parent="Theme.TicTacToe" />
     <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/yellow</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/snapchatlogo</item>
-        <item name="postSplashScreenTheme">@style/Base.Theme.SnapchatSplashScreen</item>
+        <item name="postSplashScreenTheme">@style/Theme.TicTacToe</item>
     </style>
 </resources>
