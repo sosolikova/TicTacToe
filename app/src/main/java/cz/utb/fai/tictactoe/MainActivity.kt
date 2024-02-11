@@ -1,6 +1,8 @@
 package cz.utb.fai.tictactoe
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initBoard()
+        setTurnLabel()
     }
     private fun initBoard()
     {
@@ -60,12 +63,17 @@ class MainActivity : AppCompatActivity() {
             .setCancelable(false)
             .show()
     }
+
     private fun resetBoard()
     {
         for(button in boardList)
         {
             button.text = ""
         }
+        firstTurn = if (firstTurn == Turn.NOUGHT) Turn.CROSS else Turn.NOUGHT
+        currentTurn = firstTurn
+        setTurnLabel()
+/*
         if(firstTurn) == Turn.NOUGHT)
             firstTurn = Turn.CROSS
         else if(firstTurn == Turn.CROSS)
@@ -73,6 +81,8 @@ class MainActivity : AppCompatActivity() {
 
         currentTurn = firstTurn
         setTurnLabel()
+
+ */
     }
     private fun fullBoard(): Boolean
     {
