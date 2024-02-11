@@ -46,11 +46,35 @@ class MainActivity : AppCompatActivity() {
             return
         addToBoard(view)
 
+        if(checkForVictory(NOUGHT))
+        {
+            result("Noughts Win!")
+        }
+        if(checkForVictory(CROSS))
+        {
+            result("Crosses Win!")
+        }
+
         if(fullBoard())
         {
             result("Draw")
         }
     }
+
+    private fun checkForVictory(s: String): Boolean
+    {
+        // horizontal victory
+        if(match(binding.a1,s) && match(binding.a2,s) && match(binding.a3,s))
+            return true
+        if(match(binding.b1,s) && match(binding.b2,s) && match(binding.b3,s))
+            return true
+        if(match(binding.c1,s) && match(binding.c2,s) && match(binding.c3,s))
+            return true
+
+        return false
+    }
+
+    private fun match (button: Button, symbol : String ): Boolean = button.text == symbol
 
     private fun result(title: String)
     {
