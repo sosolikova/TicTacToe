@@ -6,6 +6,8 @@ import cz.utb.fai.tictactoe.databinding.ActivityMainBinding
 import java.net.HttpURLConnection
 import java.net.URL
 import android.widget.TextView
+import com.google.gson.Gson
+import java.io.InputStreamReader
 
 
 class SecondActivity : AppCompatActivity() {
@@ -29,13 +31,21 @@ class SecondActivity : AppCompatActivity() {
             if(connection.responseCode == 200)
             {
                 val inputSystem = connection.inputStream
-                println(inputSystem.toString())
+                val inputStreamReader = InputStreamReader(inputSystem, "UTF-8")
+                val request = Gson().fromJson(inputStreamReader, Request::class.java)
+                updateUI(request)
+                inputStreamReader.close()
+                inputSystem.close()
             }
             else
             {
              //   binding.baseCurrency.text = "Failed Connection"
             }
         }
-
     }
+    private fun updateUI(request: Request)
+    {
+        TODO("Not yet implemented")
+    }
+
 }
