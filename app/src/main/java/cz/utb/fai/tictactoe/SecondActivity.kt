@@ -33,7 +33,7 @@ class SecondActivity : AppCompatActivity() {
             }
             else
             {
-                binding.baseCurrency.text = "Failed Connection"
+             //   binding.baseCurrency.text = "Failed Connection"
             }
         }
 
