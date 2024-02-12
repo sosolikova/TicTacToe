@@ -30,4 +30,37 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lastUpdated" />
+    <TextView
+        android:id="@+id/eur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eur"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/baseCurrency" />
+    <TextView
+        android:id="@+id/usd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usd"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eur" />
+    <TextView
+        android:id="@+id/gdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gdp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usd" />
 </androidx.constraintlayout.widget.ConstraintLayout>
