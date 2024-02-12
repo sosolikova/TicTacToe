@@ -7,15 +7,16 @@ import java.net.HttpURLConnection
 import java.net.URL
 import android.widget.TextView
 import com.google.gson.Gson
+import cz.utb.fai.tictactoe.databinding.ActivitySecondBinding
 import java.io.InputStreamReader
 
 
 class SecondActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySecondBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         fetchCurrencyData().start()
@@ -39,13 +40,20 @@ class SecondActivity : AppCompatActivity() {
             }
             else
             {
-             //   binding.baseCurrency.text = "Failed Connection"
+                binding.baseCurrency.text = "Failed Connection"
             }
         }
     }
     private fun updateUI(request: Request)
     {
-        TODO("Not yet implemented")
+        runOnUiThread{
+            kotlin.run {
+                binding.lastUpdated.text = request.time_last_update_utc
+                binding.eur.text = String.format("EUR: %.2f", request.rates.EUR)
+                binding.usd.text = String.format("USD: %.2f", request.rates.USD)
+                binding.gbp.text = String.format("EUR: %.2f", request.rates.GBP)
+            }
+        }
     }
 
 }
