@@ -127,16 +127,6 @@ class MainActivity : AppCompatActivity() {
         firstTurn = if (firstTurn == Turn.NOUGHT) Turn.CROSS else Turn.NOUGHT
         currentTurn = firstTurn
         setTurnLabel()
-/*
-        if(firstTurn) == Turn.NOUGHT)
-            firstTurn = Turn.CROSS
-        else if(firstTurn == Turn.CROSS)
-            firstTurn = Turn.NOUGHT
-
-        currentTurn = firstTurn
-        setTurnLabel()
-
- */
     }
     private fun fullBoard(): Boolean
     {
