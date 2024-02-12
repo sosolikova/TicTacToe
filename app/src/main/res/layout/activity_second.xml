@@ -7,13 +7,27 @@
     tools:context=".SecondActivity">
 
     <TextView
+        android:id="@+id/lastUpdated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ActivityB"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Last Updated:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/baseCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/base_currency"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastUpdated" />
 </androidx.constraintlayout.widget.ConstraintLayout>

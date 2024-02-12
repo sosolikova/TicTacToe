@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TicTacToe</string>
+    <string name="base_currency">AUD: 1.00</string>
 </resources>
