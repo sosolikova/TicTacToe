@@ -47,8 +47,8 @@ class ThirdActivity : AppCompatActivity() {
         val dataStoreKey = preferencesKey<String>(key)
         val preferences = dataStore.data.first()
         return preferences[dataStoreKey]
-        }
     }
+
     override fun onDestroy() {
         super.onDestroy()
          binding = null
