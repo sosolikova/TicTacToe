@@ -55,4 +55,11 @@ dependencies {
     implementation "androidx.activity:activity-ktx:1.8.2"
     implementation "androidx.fragment:fragment-ktx:1.6.2"
     implementation 'androidx.room:room-runtime:2.4.3'
+
+    implementation "androidx.datastore:datastore-preferences-android:1.1.0-beta01"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
+    implementation 'org.jetbrains.kotlinx:kotrlinx-coroutines-android:1.3.9'
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
 }
