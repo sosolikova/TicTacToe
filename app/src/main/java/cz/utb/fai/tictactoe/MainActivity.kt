@@ -38,6 +38,11 @@ class MainActivity : AppCompatActivity() {
             val Intent = Intent(this,SecondActivity::class.java)
             startActivity(Intent)
         }
+        val thirdActButton = findViewById<Button>(R.id.third_act_btn)
+        thirdActButton.setOnClickListener{
+            val Intent = Intent(this,ThirdActivity::class.java)
+            startActivity(Intent)
+        }
         initBoard()
         setTurnLabel()
     }
