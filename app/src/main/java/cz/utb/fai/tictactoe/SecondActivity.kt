@@ -49,9 +49,9 @@ class SecondActivity : AppCompatActivity() {
         runOnUiThread{
             kotlin.run {
                 binding.lastUpdated.text = request.time_last_update_utc
-                binding.eur.text = String.format("EUR: %.2f", request.rates.EUR)
-                binding.usd.text = String.format("USD: %.2f", request.rates.USD)
-                binding.gbp.text = String.format("EUR: %.2f", request.rates.GBP)
+                binding.eur.text = String.format("EUR: %.2f", request.rates.EUR * 1000)
+                binding.usd.text = String.format("USD: %.2f", request.rates.USD * 1000)
+                binding.gbp.text = String.format("EUR: %.2f", request.rates.GBP * 1000)
             }
         }
     }
