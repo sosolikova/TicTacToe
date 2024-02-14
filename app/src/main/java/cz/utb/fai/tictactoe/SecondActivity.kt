@@ -51,7 +51,7 @@ class SecondActivity : AppCompatActivity() {
                 binding.lastUpdated.text = request.time_last_update_utc
                 binding.eur.text = String.format("EUR: %.2f", request.rates.EUR * 1000)
                 binding.usd.text = String.format("USD: %.2f", request.rates.USD * 1000)
-                binding.gbp.text = String.format("EUR: %.2f", request.rates.GBP * 1000)
+                binding.gbp.text = String.format("GBP: %.2f", request.rates.GBP * 1000)
             }
         }
     }
